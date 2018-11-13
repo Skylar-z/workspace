@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>请填写信息</title>
+    <link rel="stylesheet" href="./css/link.css">
+    <style>
+        .weui-count__btn weui-count__decrease {
+            background-color: #999 !important;
+        }
+        .weui-count .weui-count__increase {
+            background-color: #999 !important;
+        }
+        .weui-count .weui-count__btn {
+            border: 1px solid #999 !important;
+        }
+        .toolbar .picker-button {
+            color: #999 !important;
+        }
+        .weui-count .weui-count__decrease:before {
+            background-color: #999 !important;
+
+        }
+        .weui-count .weui-count__increase:after,
+        .weui-count .weui-count__increase:before {
+            background-color: #fff !important;
+        }
+        </style>
+</head>
+
+<body>
+    <!-- 报名信息 -->
+    <div class="page">
+        <div class="weui-cells mt0">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    请选择数量
+                </div>
+                <div class="weui-cell__ft">
+                    <div class="weui-count">
+                        <a class="weui-count__btn weui-count__decrease"></a>
+                        <input id="registration_num" class="weui-count__number" type="number" value="1" />
+                        <a class="weui-count__btn weui-count__increase"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <span style="color:red">*</span>
+                    姓名：
+                </div>
+                <div class="weui-cell__bd">
+                    <input type="text" class="weui-input">
+                </div>
+            </div>
+
+
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <span style="color:red">*</span>
+                    手机：
+                </div>
+                <div class="weui-cell__bd">
+                    <input type="number" class="weui-input">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 报名信息 结束-->
+
+    <!-- 底部栏 -->
+    <div class="fixed">
+        <div class="bottombarbuy" style="height:2.5rem;line-height: 2.5rem">
+            <div class="bottombarbuy__label" style="background-color: #fff">
+                <span style="color:#000">合计</span>
+                <span style="color:#f88601">￥0.00</span>
+            </div>
+
+            <div class="bottombarbuy__label" style="background-color:#f88601">
+                立即报名
+            </div>
+        </div>
+    </div>
+    <!-- 底部栏 结束-->
+
+
+
+    <script src="./js/jquery-2.1.4.js"></script>
+    <script src="./js/jquery-weui.min.js"></script>
+    <script>
+        var MAX = 99,
+            MIN = 1;
+        $('.weui-count__decrease').click(function (e) {
+            var $input = $(e.currentTarget).parent().find('.weui-count__number');
+            var number = parseInt($input.val() || "0") - 1
+            if (number < MIN) number = MIN;
+            $input.val(number)
+        })
+        $('.weui-count__increase').click(function (e) {
+            var $input = $(e.currentTarget).parent().find('.weui-count__number');
+            var number = parseInt($input.val() || "0") + 1
+            if (number > MAX) number = MAX;
+            $input.val(number)
+        })
+    </script>
+</body>
+
+</html>

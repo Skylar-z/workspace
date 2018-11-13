@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/link.css">
+</head>
+
+<body>
+    <div class="page" style="background-color:#fff">
+        <div class="relative">
+            <!-- 拆红包 -->
+            <!-- <div id='money' class="giftDiv">
+                <img src="./img/redEnvelotBG.png" style="width:100%" alt="">
+                <div class="absolute" style="top:1.6rem;right:0;width:100%;">
+                    <div class="action-title">
+                        恭喜您抢到现金红包
+                    </div>
+                    <div class="flexbaseline" style="margin-top:3rem">
+                        <span style="font-size:2rem;color:red">0.0001</span>
+                        <span style="font-size:0.9rem;color:red">元</span>
+                    </div>
+                </div>
+                <span class="countDown" >3</span>
+            </div> -->
+            <!-- 拆红包结束 -->
+
+            <!-- 领优惠券 -->
+            <!-- <div id='card' class="giftDiv">
+                <img src="./img/cardBG.png" style="width:100%" alt="">
+                <div class="absolute controlTop" style="right:0;width:100%;">
+                    <div class="action-title">
+                        <span style="font-size:2rem;color:#bfa16e">100.00</span>
+                        <span style="font-size:0.9rem;color:#bfa16e">元</span>
+                    </div>
+                    <div style="width:79%;height:2px;background-color:#bfa16e;margin:0 2rem"></div>
+                    <div style="height:1rem"></div>
+                    <div style="width:69%;height:2px;background-color:#bfa16e;margin:0 3rem;"></div>
+                    <div class="flexcolmn flexallcenter" style="margin-top:1rem;color:#bfa16e;font-size:0.9rem">
+                        <span>满200减30</span>
+                        <span>有效期至2008.01.20</span>
+                    </div>
+                </div>
+                 <span class="countDown" >3</span>
+            </div> -->
+            <!-- 领优惠券 结束-->
+
+            <!-- 领礼品 -->
+            <div id='gift'>
+               <div class="giftDiv" style="border:1px solid #000">
+                   <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538463082&di=8814419bff4997c1a2c348d06df76530&imgtype=jpg&er=1&src=http%3A%2F%2Fpic32.photophoto.cn%2F20140822%2F0037037185762734_b.jpg" style="width:100%" alt="">
+                   <div class="weui-cells mt0" >
+                       <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                    <div class="main-word" style="font-weight:700;font-size:1.1rem">
+                                        获得奖品:泰迪熊*1
+                                    </div>
+                                    <div class="secondry-word">
+                                        获奖时间：2018.08.20
+                                    </div>
+                                </div>
+                       </div>
+                   </div>
+                   <span class="countDown" >3</span>
+               </div> 
+            </div>
+            <!-- 领礼品 结束-->
+
+        
+            <div class="moregift">
+                <img src="./img/moreGifts.png" style="width:100%;">
+            </div>
+        </div>
+
+
+        <div style="padding:15px;border-top:5px solid #f8f8f8">
+            <div style="font-weight:700;font-size:1.1rem;padding:10px 0">
+                这里是活动标题
+            </div>
+            <div style="color:#999;font-size:1rem">
+                这里是活动广告这里是活动广告这里是活动广告这里是活动广告
+            </div>
+            <div class="contain-cell">
+                <img style="width:100%" src="./img/1.jpg" alt="">
+            </div>
+            <div class="contain-cell">
+                <img style="width:100%" src="./img/1.jpg" alt="">
+            </div>
+            <div class="contain-cell">
+                <img style="width:100%" src="./img/1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script>
+    $(function () {
+        var height = window.innerHeight ;
+        if((666<height&&height<735)||height>811){
+            $('.controlTop').css('top','12rem')
+        }else {
+            $('.controlTop').css('top','13.5rem')
+        }
+
+ 
+       /*  setTimeout(function(){
+            $(".giftDiv").css('display','none');
+        },3000)  */
+    })
+</script>
+
+</html>

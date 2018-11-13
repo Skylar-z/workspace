@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/link.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_843261_b28ls0j1d4i.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="weui-cells mt0">
+            <ul class="weui-cell flex">
+                <li class="weu-cell__bd spanborder flex1 on flexallcenter">
+                    <i class="iconfont icon-hongbao"></i>
+                    红包
+                </li>
+                <li class="weu-cell__bd spanborder flex1 flexallcenter">
+                    <i class="iconfont icon-lipin"></i>
+                    礼品
+                </li>
+                <li class="weu-cell__bd spanborder flex1 flexallcenter">
+                    <i class="iconfont icon-kaquan"></i>
+                    卡券
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="weui-cells mt0">
+                        <!-- 红包情况 -->
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd ">
+                                <div class="main-word">这里是活动的标题</div>
+                                <div class="secondry-word flexbetween">
+                                    <span>红包剩余：<span style="color:red">10.24</span>/10086</span>
+                                    <span>2010.08.12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 红包情况 结束 -->
+
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd ">
+                                <div class="main-word">这里是活动的标题</div>
+                                <div class="secondry-word flexbetween">
+                                    <span>红包剩余：<span style="color:red">10.24</span>/10086</span>
+                                    <span>2010.08.12</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="weui-cells mt0">
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">
+                                <img src="./img/1.jpg" style="width:5rem;height:5rem" alt="">
+                            </div>
+                            <div class="weui-cell__bd">
+                                <div class="main-word" style="height:3rem">
+                                    小熊公仔之类的玩具无所谓啦随便糊弄一下
+                                </div>
+                                <div class="secondry-word flexbetween">
+                                    <span>礼物剩余：<span style="color:red">1</span>/10</span>
+                                    <span>2010.08.12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="weui-cells mt0">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd ">
+                                <div class="main-word">这里是卡券的名称</div>
+                                <div class="secondry-word flexbetween">
+                                    <span>卡券剩余：<span style="color:red">10.24</span>/10086</span>
+                                    <span>2010.08.12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+        <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/swiper.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/city-picker.min.js"></script>
+        <script>
+
+
+            $(function () {
+                var mySwiper = new Swiper('.swiper-container', {
+                    onTransitionEnd: function (swiper) {
+                        $('li').eq(mySwiper.activeIndex).addClass('on').siblings().removeClass('on');
+                    }
+                })
+                $('li').click(function () {
+                    $(this).addClass('on').siblings().removeClass('on');
+                    mySwiper.slideTo($(this).index(), 1000)
+                });
+            })
+
+        </script>
+</body>
+
+</html>

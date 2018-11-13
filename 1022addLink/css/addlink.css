@@ -1,0 +1,59 @@
+.fullpage{
+    display: none;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+.swiperimg{
+    width: 100%;
+    padding:0 15px;
+    box-sizing: border-box;
+}
+.swiperimg__img{
+    width: 100%;
+}
+.swiperimg__del{
+   position:absolute;
+   top:5px;
+   right:5px;
+   width: 1.5rem;
+   height: 1.5rem;
+}
+.colors{
+    width: 100%;
+    height: 1.5rem;
+  
+}
+.colors>li{
+    float: left;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin-left: 10px;
+    border:1px solid #000;
+}
+.colors>li.on{
+    border: 2px solid #f88601;
+}
+.linkbutton{
+    border-radius: 5px;
+    padding: 0.5rem 2rem ;
+
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.container{
+    
+}
+
+.container>img{
+    width: 100%;
+}

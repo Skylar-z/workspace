@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="./../src/css/link.css">
+    <link rel="stylesheet" href="css/secondsell.css">
+</head>
+
+<body>
+    <div class="secondsell__wrapper">
+        <!-- 头图 -->
+        <div class="secondsell__banner" onclick="$('.secondsell__swiper').slideDown()">
+            <img src="./img/elastic.png" alt="">
+            <div class="resetBanner" style="display: none;">恢复原图</div>
+        </div>
+        <!-- 头图 结束 -->
+
+
+
+        <!-- 时间 -->
+        <div class="secondsell__time">
+            <div class="secondsell__title">
+                <span> 秒杀设置</span>
+            </div>
+            <div class="secondsell__context">
+                <div class="secondsell--flex">
+                    <div>结束时间：</div>
+                    <input type="text" style="width:50%;" value="2018-12-31" class="secondsell--input">
+                </div>
+
+                <div class="secondsell--flex">
+                    <div>商品数量：</div>
+                    <input type="text" style="width:50%;" value="100份" class="secondsell--input">
+                </div>
+            </div>
+        </div>
+        <!-- 时间 结束 -->
+
+        <!-- 活动规则 -->
+        <div class="secondsell__ruler">
+            <div class="secondsell__title">
+                <span> 活动规则</span>
+            </div>
+            <div class="secondsell__context">
+                <textarea class="textarea-style" name="" id="">1.点击我要报名获取秒杀资格
+2.秒杀倒计时结束后，点击我要抢，准时开抢
+3.抢到的用户记得联系商家兑奖
+                </textarea>
+
+            </div>
+        </div>
+        <!-- 活动规则 结束 -->
+
+        <!-- 商品介绍 -->
+        <div class="secondsell__goods">
+            <div class="secondsell__title">
+                <span> 商品介绍</span>
+            </div>
+            <!-- 富文本框 -->
+            <div class="secondsell--textarea">
+                点击编辑信息..
+            </div>
+            <div class="secondsell__context">
+
+            </div>
+        </div>
+        <!-- 商品介绍  结束 -->
+
+        <!-- 机构选择-->
+        <div class="secondsell__org">
+            <div class="secondsell__goods">
+                <div class="secondsell__title">
+                    <span> 选择活动机构</span>
+                </div>
+
+
+                <div class="secondsell__context" style="border:1px solid #fff;border-radius: 5px;">
+                    <div class="secondsell--item">
+                        <div style="width:60%;text-align:center">江西小区</div>
+                        <div class="point-full"></div>
+                    </div>
+
+                    <div class="secondsell--item">
+                        <div style="width:60%;text-align:center">校区2</div>
+                        <div class="point-full"></div>
+                    </div>
+
+                    <div class="secondsell--item">
+                        <div style="width:60%;text-align:center">校区3</div>
+                        <div class="point-full"></div>
+                    </div>
+                    <div class="secondsell--item">
+                        <div style="width:60%;text-align:center">校区3</div>
+                        <div class="point-full"></div>
+                    </div>
+                    <div class="secondsell--item">
+                        <div style="width:60%;text-align:center">校区3</div>
+                        <div class="point-full"></div>
+                    </div>
+                    <div class="secondsell--item">
+                        <div style="width:60%;text-align:center">校区3</div>
+                        <div class="point-full"></div>
+                    </div>
+                    <div class="secondsell--item">
+                        <div style="width:60%;text-align:center">校区3</div>
+                        <div class="point-full"></div>
+                    </div>
+                    <div class="secondsell--item">
+                        <div style="width:60%;text-align:center">校区3</div>
+                        <img src="./../src/img/delete.png" style="width:1.5rem;height:1.5rem;margin-right: 5px;" alt="">
+                    </div>
+                </div>
+
+                <div class="secondsell--button" onclick="$('.BG').show()">
+                    选择
+                </div>
+
+            </div>
+        </div>
+        <!-- 机构选择  结束 -->
+
+        <!-- 机构介绍 -->
+        <div class="secondsell__org">
+            <div class="secondsell__goods">
+                <div class="secondsell__title">
+                    <span> 机构介绍</span>
+                </div>
+                <!-- 富文本框 -->
+                <div class="secondsell--textarea">
+                    点击编辑信息..
+                </div>
+                <div class="secondsell__context">
+
+                </div>
+            </div>
+        </div>
+        <!-- 机构介绍 结束 -->
+
+        <!-- 报名信息 -->
+        <div class="secondsell__editenroll">
+
+            <div class="secondsell__title">
+                <span> 报名信息</span>
+            </div>
+
+            <div class="secondsell__context">
+                <div class="secondsell--item">
+                    <div class="secondsell--input" style="width:60%;text-align:center">姓名（必填）</div>
+                    <div class="point-full"></div>
+                    <span>必填</span>
+                </div>
+                <div class="secondsell--item">
+                    <div class="secondsell--input" style="width:60%;text-align:center">电话（必填）</div>
+                    <div class="point-full"></div>
+                    <span>必填</span>
+                </div>
+                <div class="secondsell--item">
+                    <div style="width:60%">
+                        <img src="./../src/img/del.png" class="del" alt="">
+                        <input class="secondsell--input" style="text-align:center;margin-left: 2rem" placeholder="请编辑信息" />
+                    </div>
+                    <div class="point-none"></div>
+                    <span>必填</span>
+                    <!-- none状态不出现 必填 两个字 -->
+                </div>
+
+                <div class="secondsell--button">
+                    添加收集字段
+                </div>
+            </div>
+
+        </div>
+        <!-- 报名信息 结束 -->
+
+        <!-- 分享 -->
+        <div class="secondsell__share">
+            <div class="secondsell__title">
+                <span> 分享标题</span>
+            </div>
+            <input type="text" maxlength="20" class="secondsell--input" placeholder="请输入分享标题,20字以内" style="width:100%">
+        </div>
+
+        <div>
+            <div class="secondsell__title">
+                <span> 分享内容</span>
+            </div>
+            <textarea type="text" maxlength="50" class="textarea-style" placeholder="请输入分享内容，50字以内" rows="4"></textarea>
+        </div>
+
+        <!-- 分享 结束 -->
+
+        <!-- 虚拟设置 -->
+        <div class="secondsell__setting">
+            <div class="secondsell__title">
+                <span> 虚拟设置</span>
+            </div>
+            <div class="secondsell--flex">
+                <div>浏览量：</div>
+                <input type="number" class="secondsell--input">
+            </div>
+            <div class="secondsell--flex">
+                <div>转发量：</div>
+                <input type="number" class="secondsell--input">
+            </div>
+            <div class="secondsell--flex">
+                <div>报名数：</div>
+                <input type="number" class="secondsell--input">
+            </div>
+        </div>
+        <!-- 虚拟设置  结束 -->
+
+        <!-- 背景音乐 -->
+        <div class="secondsell__music">
+            <div class="secondsell__title">
+                <span>背景音乐</span>
+            </div>
+            <div class="secondsell--flex">
+                <img src="./img/music.png" style="width:1.5rem;margin-right: 20px;" alt="">
+                <div class="secondsell--input" style="width:70%">
+                    <select name="" id="" class="select-style">
+                        <option value="">--选择音乐--</option>
+                        <option value="">无</option>
+                        <option value="">啊啊啊</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- 背景音乐 结束 -->
+
+        <!-- 机构信息 -->
+        <div class="secondsell__connect">
+            <div class="secondsell__title">
+                <span> 联系方式</span>
+            </div>
+            <textarea type="text" class="textarea-style" placeholder="请输入机构联系方式，方便用户联系" rows="4"></textarea>
+        </div>
+        <!-- 机构信息 结束 -->
+
+        <div class="flexrow">
+            <div class="submit-button-full" onclick="location.href='showSecondSell.html'">确认发布</div>
+            <div class="submit-button-full-other">保存活动</div>
+        </div>
+    </div>
+
+    <!-- 添加轮播图 -->
+    <div class="secondsell__swiper" style="display:none">
+        <div class="weui-cells weui-cells_form mt0">
+            <div class="weui-cell" style="color:#999;font-size:0.8rem">
+                建议上传图片尺寸为750*400，展示效果最好！
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <div class="weui-uploader">
+                        <div class="weui-uploader__hd">
+                            <p class="weui-uploader__title">添加图片</p>
+                            <div class="weui-uploader__info">最多4张</div>
+                        </div>
+                        <div class="weui-uploader__bd">
+                            <ul class="weui-uploader__files" id="uploaderFiles">
+                                <li class="weui-uploader__file relative" style="background-image:url(./../src/img/2.png)">
+                                    <img src="./../src/img/delete.png" class="absolute" style="top:0;right:0;width:1.5rem;height:1.5rem" alt="">
+                                </li>
+                                <li class="weui-uploader__file relative" style="background-image:url(./../src/img/2.png)">
+                                    <img src="./../src/img/delete.png" class="absolute" style="top:0;right:0;width:1.5rem;height:1.5rem" alt="">
+                                </li>
+                                <li class="weui-uploader__file relative" style="background-image:url(./../src/img/2.png)">
+                                    <img src="./../src/img/delete.png" class="absolute" style="top:0;right:0;width:1.5rem;height:1.5rem" alt="">
+                                </li>
+                                <li class="weui-uploader__file relative" style="background-image:url(./../src/img/2.png)">
+                                    <img src="./../src/img/delete.png" class="absolute" style="top:0;right:0;width:1.5rem;height:1.5rem" alt="">
+                                </li>
+                                <div class="weui-uploader__input-box">
+                                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                                </div>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flexrow showbutton">
+            <div class="flex1">
+                默认图片
+            </div>
+            <div class="flex1" style="background:linear-gradient(45deg, #58deaa,#2e97be);color:#fff" onclick="$('.secondsell__swiper').slideUp()">
+                确定
+            </div>
+        </div>
+    </div>
+    <!-- 添加轮播图 结束 -->
+
+
+    <!-- 选择机构 弹层 -->
+    <div class="BG" style="display:none">
+        <div class="divWraper" style="background: linear-gradient(to right,#490492, #6711b7, #490492);">
+            <div id="allSchollList" class="" style="background-color:transparent;width:100%;color:#fff">
+                <label id="schoolId_all" class="weui-check__label flexrow" style='margin-left:15px;padding:10px 15px 10px 0;'>
+                    <input onclick="changeAllCheckbox()" style="opacity: 0" type="checkbox" />
+                    <div class="weui-cell__hd weui-check__hd_in-checkbox">
+                        <div class="point-none" style="margin-right:10px"></div>
+                    </div>
+                    <div class="weui-cell__bd">全选</div>
+                </label>
+                <label id="schoolId_{$vo['id']}" class="weui-check__label flexrow" style='margin-left:15px;padding:10px 15px 10px 0;'>
+                    <input type="checkbox" onclick="changeOneCheckbox('{$vo[id]}')" name="selectSchool" style="opacity: 0" />
+                    <div class="weui-cell__hd weui-check__hd_in-checkbox">
+                        <div class="point-full" style="margin-right:10px"></div>
+                    </div>
+                    <div class="weui-cell__bd">12313</div>
+                </label>
+            </div>
+            <div class="secondsell--button" onclick="$('.BG').hide()">确定</div>
+        </div>
+    </div>
+
+    <!-- 选择机构 弹层 结束-->
+
+    <script src="../src/js/jquery-2.1.4.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="./css/link.css">
+</head>
+
+<body>
+    <div class="page" style="padding-bottom: 50px">
+        <!-- 搜索栏 -->
+        <div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                    <a href="javascript:"  class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="weui-search-bar__label" id="searchText">
+                    <i class="weui-icon-search"></i>
+                    <span>搜索</span>
+                </label>
+            </form>
+            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+        </div>
+
+
+        <!-- 顾客列表-->
+        <div class="weui-cells mt0">
+            <div class="custom" onclick="$('.BG').show()">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd" style="font-size: 0.8rem">
+                        2018-08-21 10:00
+                    </div>
+                    <div class="weui-cell__ft" style="color:#f88601;font-size: 0.8rem">
+                        合计：￥10元
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        <img src="./img/1.jpg" class="pic-small" style="border-radius: 50%;" alt="">
+                    </div>
+                    <div class="weui-cell__bd">
+                        <div class="main-word2">
+                            skylar(18612341234)
+                        </div>
+                        <div class="secondry-word">
+                            商品：大保健品大保健品0大保健品大保健品大保健品*10
+                        </div>
+                    </div>
+                    <div class="weui-cell__ft">
+
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <div class="secondry-word2" style="font-size: 0.8rem">
+                            订单号：1234567891234512
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="custom">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd" style="font-size: 0.8rem">
+                        2018-08-21 10:00
+                    </div>
+                    <div class="weui-cell__ft" style="color:#f88601;font-size: 0.8rem">
+                        合计：￥10元
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        <img src="./img/1.jpg" class="pic-small" style="border-radius: 50%;" alt="">
+                    </div>
+                    <div class="weui-cell__bd">
+                        <div class="main-word2">
+                            skylar(18612341234)
+                        </div>
+                        <div class="secondry-word">
+                            商品：大保健品大保健品0大保健品大保健品大保健品*10
+                        </div>
+                    </div>
+                    <div class="weui-cell__ft">
+
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <div class="secondry-word2" style="font-size: 0.8rem">
+                            订单号：1234567891234512
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 顾客列表 结束 -->
+
+
+        <!-- 顾客详情 -->
+        <div class="BG">
+            <div class="weui-form-preview-BG">
+                <div class="weui-form-preview">
+                    <div class="weui-form-preview__hd">
+                        <div class="weui-form-preview__item">
+                            <div class="weui-form-preview__value_in-hd">报名详情</div>
+                        </div>
+                    </div>
+                    <div class="weui-form-preview__bd">                      
+                        <div class="weui-form-preview__item">
+                            <div class="weui-form-preview__label">其他信息1</div>
+                            <div id="showDetail_is_success" class="weui-form-preview__value"></div>
+                        </div>
+                        <div class="weui-form-preview__item">
+                            <div class="weui-form-preview__label">其他信息2</div>
+                            <div id="showDetail_deposit" class="weui-form-preview__value"></div>
+                        </div>
+                        <div class="weui-form-preview__item">
+                            <div class="weui-form-preview__label">其他信息3</div>
+                            <div id="showDetail_is_payed_last_money" class="weui-form-preview__value"></div>
+                        </div>
+                    </div>
+                    <div class="weui-form-preview__ft">
+                        <div class="weui-form-preview__btn" hover-class="weui-form-preview__btn_active" onclick="$('.BG').hide()">确定
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 顾客详情  结束 -->
+
+        <!-- 底部栏 -->
+        <div class='fixed flex' style="background-color: #fff;">
+            <div class="flexaligncenter weui-cell_access" style="width: 50%;padding: 5px;" onclick="warmAddMail()">
+                <img style="width: 35px;height: 25px;margin-bottom: 5px;" src="__PUBLIC__/Home/marketingTools/img/mail.png"
+                    alt="">
+                <span style="font-size: 12px;">导出到邮箱</span>
+            </div>
+            <div class="flexaligncenter weui-cell_access" style="width: 50%;padding: 5px" onclick="warmAddXdy()">
+                <img style="width: 45px;height: 25px;margin-bottom: 5px" src="__PUBLIC__/Home/marketingTools/img/xd.png"
+                    alt="">
+                <span style="font-size: 12px;">导出到校道云系统</span>
+            </div>
+        </div>
+        <!-- 底部啦结束 -->
+    </div>
+
+
+
+    <script src="./js/jquery-2.1.4.js"></script>
+    <script src="./js/jquery-weui.min.js"></script>
+</body>
+
+</html>

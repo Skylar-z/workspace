@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equivi ="X-UA-Compatible" content="IE=edge">
+    <title>回显商品名称</title>
+    <link rel="stylesheet" href="./css/link.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_805795_m91w90pt4id.css">
+    <style>
+        .iconfont {
+            font-size: 1rem;
+        }
+        .weui-count__btn weui-count__decrease {
+            background-color: #999 !important;
+        }
+        .weui-count .weui-count__increase {
+            background-color: #999 !important;
+        }
+        .weui-count .weui-count__btn {
+            border: 1px solid #999 !important;
+        }
+        .toolbar .picker-button {
+            color: #999 !important;
+        }
+        .weui-count .weui-count__decrease:before {
+            background-color: #999 !important;
+
+        }
+        .weui-count .weui-count__increase:after,
+        .weui-count .weui-count__increase:before {
+            background-color: #fff !important;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="page" style="padding-bottom: 50px">
+        <!-- 商品信息 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="goodinfo">
+            <div class="goodinfo__name">
+                我的妹抖龙最近有点奇怪？可能是喜
+            </div>
+
+            <div class="flexbetween" style="color:#999">
+                <div>
+                    <i class="iconfont icon-liulan" style="font-size:0.8rem">10086</i>
+                    <i class="iconfont icon-fenxiang" style="margin-left:10px;font-size:0.8rem">80061</i>
+                </div>
+                <div  style="font-size:0.8rem">已售：10086件</div>
+            </div>
+        </div>
+        <!-- 商品信息  结束 -->
+
+        <!-- 商品描述 -->
+        <div class="gooddesc">
+            <div class="gooddesc__title">
+                商品详情
+            </div>
+            <div class="gooddesc__content">
+                <div>
+                    为了追寻托尔的脚步而来到人类世界的龙娘，另一个原因是因为恶作剧被从原来的世界放逐了，有着我行我素的性格，给人一种天然呆的无口印象。
+                </div>
+                <img src="./img/1.jpg" alt="">
+            </div>
+        </div>
+        <!-- 商品描述结束 -->
+
+        <!-- 机构描述 -->
+        <div class="gooddesc">
+            <div class="gooddesc__title">
+                机构详情
+            </div>
+            <div class="gooddesc__content">
+                <div>
+                    为了追寻托尔的脚步而来到人类世界的龙娘，另一个原因是因为恶作剧被从原来的世界放逐了，有着我行我素的性格，给人一种天然呆的无口印象。
+                </div>
+                <img src="./img/1.jpg" alt="">
+            </div>
+        </div>
+        <!-- 机构描述 结束-->
+
+
+    </div>
+
+
+    <!-- 底部栏 购买 -->
+    <div class="fixed">
+        <div class="bottombarbuy">
+            <div class="bottombarbuy__item">
+                <div class="bottombarbuy__icon">
+                    <i class="iconfont icon-yemian"></i>
+                </div>
+                <div class="bottombarbuy__text">
+                    首页
+                </div>
+            </div>
+            <div class="bottombarbuy__item">
+                <div class="bottombarbuy__icon">
+                    <i class="iconfont icon-icon02"></i>
+                </div>
+                <div class="bottombarbuy__text">
+                    我要制作
+                </div>
+            </div>
+
+            <div class="bottombarbuy__label" onclick="$('.BG').show()">
+                <span>我要购买</span>
+            </div>
+        </div>
+    </div>
+    <!-- 底部栏 结束 -->
+
+    <!-- 购买弹层 -->
+    <div class="BG">
+        <div class="goodsformat">
+            <div class="goodsformat__header">
+                <div class="goodsformat__img">
+                    <img src="./img/2.png" alt="">
+                </div>
+                <div class="goodsformat__secondrymessage">
+                    <div class="goodsformat__price">
+                        ￥200
+                    </div>
+                    <div class="goodsformat__inventory">
+                        库存310件
+                    </div>
+                </div>
+                <div class="goodsformat__clear">
+                    <i class="weui-icon-cancel" onclick="$('.BG').hide()"></i>
+                </div>
+            </div>
+            <div class="goodsformat__content">
+                <div class="goodsformat__wraper">
+                    <div class="goodsformat__list--title">颜色分类</div>
+                    <ul class="goodsformats">
+                        <li class="goodsformat__list chooseon">
+                            <img src="./img/2.png" alt="">
+                            <div class="goodsformat__list--desc">
+                                下半年光面卫斯理蓝
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="goodsformat__wraper">
+                    <div class="goodsformat__list--title">尺寸</div>
+                    <ul class="goodsformats">
+                        <li class="goodsformat__list choosedisable">
+                            <div class="goodsformat__list--desc">
+                                A4
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="goodsformat__wraper flexbetween">
+                    <div>
+                        购买数量
+                    </div>
+                    <div>
+                        <div class="weui-count">
+                            <a class="weui-count__btn weui-count__decrease"></a>
+                            <input id="registration_num" class="weui-count__number" type="number" value="1" />
+                            <a class="weui-count__btn weui-count__increase"></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="goodsformat__button">
+
+                <div class='buttom1' onclick="location.href='./message.html'">确定</div>
+            </div>
+        </div>
+    </div>
+    <!-- 购买弹层 结束-->
+
+
+
+    <script src="./js/jquery-2.1.4.js"></script>
+    <script src="./js/jquery-weui.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        //初始化萝卜图
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+        })
+    </script>
+</body>
+
+</html>

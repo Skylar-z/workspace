@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="../src/css/link.css">
+    <link rel="stylesheet" href="./css/addlink.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="weui-cells mt0">
+            <div class="weui-cell weui-cell_access" onclick="$('#addImg').show()">
+                <div class="weui-cell__bd">
+                    添加轮播图
+                </div>
+                <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+            </div>
+
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd">
+                    机构详情
+                </div>
+                <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+            </div>
+        </div>
+
+        <div class="weui-cells__title">
+            按钮设置
+        </div>
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    按钮文字：
+                </div>
+                <div class="weui-cell__bd">
+                    <input type="text" class="weui-input" maxlength="10" placeholder="10个字以内">
+                </div>
+            </div>
+            <div class="weui-cell ">
+                <div class="weui-cell__hd">
+                    按钮颜色：
+                </div>
+                <div class="weui-cell__bd">
+                    <ul id="buttonColor" class="colors flexrow">
+                        <li style="background-color:#000"></li>
+                        <li style="background-color:rgb(6, 168, 243)"></li>
+                        <li style="background-color:#009933"></li>
+                        <li style="background-color:#d4237a"></li>
+                        <li style="background-color:red"></li>
+                        <li style="background-color:#fff"></li>
+                        <li class="on" style="background-color:yellow"></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="weui-cell ">
+                <div class="weui-cell__hd">
+                    文字颜色：
+                </div>
+                <div class="weui-cell__bd">
+                    <ul id="textColor" class="colors flexrow">
+                        <li style="background-color:#000"></li>
+                        <li style="background-color:rgb(6, 168, 243)"></li>
+                        <li style="background-color:#009933"></li>
+                        <li style="background-color:#d4237a"></li>
+                        <li style="background-color:red"></li>
+                        <li style="background-color:#fff"></li>
+                        <li class="on" style="background-color:yellow"></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">按钮链接：</div>
+                <div class="weui-cell__bd">
+                    <input type="url" class="weui-input" placeholder="请输入推广链接">
+                </div>
+            </div>
+        </div>
+
+        <div class="flexrow">
+            <div class="submit-button-full" onclick="location.href='./showAddLink.html'">
+                确认发布
+            </div>
+            <div class="submit-button-full-other">
+                保存活动
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 轮播图 -->
+    <div id="addImg" class="fullpage">
+        <div class="secondry-word" style="line-height: 1.5rem;height:1.5rem;padding:5px 15px;">
+            最多添加3张图片，建议尺寸为750*400
+        </div>
+        <div class="swiperimg">
+            <div class="relative">
+                <img class="swiperimg__img" src="../src/img/2.png" />
+                <img class="swiperimg__del" src="../src/img/delete.png" />
+            </div>
+
+            <div class="relative">
+                <img class="swiperimg__img" src="../src/img/2.png" />
+                <img class="swiperimg__del" src="../src/img/delete.png" />
+            </div>
+        </div>
+        <a class="submit-button-full mt10 relative">
+            <input id="addImgFile" class="upload-style" type="file" multiple />添加图片
+        </a>
+        <a class="submit-button-full mt10" onclick="$('#addImg').hide();$('#baseTab').show()">确定</a>
+    </div>
+    <!-- 轮播图结束 -->
+
+
+
+    </div>
+</body>
+
+<script src="../src/js/jquery-2.1.4.js"></script>
+<script src="../src/js/jquery-weui.min.js"></script>
+<script src="../src/js/city-picker.min.js"></script>
+<script src="../src/js/swiper.min.js"></script>
+
+
+<script>
+    $('#buttonColor>li').click(function (e) {
+        $('#buttonColor>li').removeClass('on');
+        $(this).addClass('on');
+    })
+
+    $('#textColor>li').click(function (e) {
+        $('#textColor>li').removeClass('on');
+        $(this).addClass('on');
+    })
+</script>
+
+</html>

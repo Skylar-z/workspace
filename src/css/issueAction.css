@@ -1,0 +1,192 @@
+.more1 {}
+
+.more1::after {
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 1px 1px 0 0;
+    border-color: #000;
+    border-style: solid;
+    -webkit-transform: matrix(.71, .71, -.71, .71, 0, 0);
+    transform: matrix(.71, .71, -.71, .71, 0, 0);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    position: relative;
+    top: -2px;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    margin-left: 10px;
+}
+
+.less::after {
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 1px 1px 0 0;
+    border-color: #000;
+    border-style: solid;
+    -webkit-transform: matrix(.71, .71, -.71, .71, 0, 0);
+    transform: matrix(.71, .71, -.71, .71, 0, 0);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: relative;
+    top: -2px;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    margin-left: 10px;
+}
+
+.weui-icon-success:before {
+    font-size: 20px;
+}
+
+.weui-agree {
+    pointer-events: none !important;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 1.3rem;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #999;
+}
+
+.themeColor {
+    color: #f88601;
+}
+
+.issue__title {
+    color: #000;
+    font-size: 13px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1
+}
+
+.issue_ticket {
+    border: 1px solid #999;
+    border-left: 3px solid #f88601;
+    padding: 0px 0px 0px 10px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.issue-ticket-right {
+    display: block;
+    width: 4%;
+    border-left: 1px dotted #999;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    font-size: 12px;
+}
+
+.issue-ticket-right::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    top: -5px;
+    left: -5px;
+    background-color: #fff;
+}
+
+.issue-ticket-right::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    bottom: -5px;
+    left: -5px;
+    background-color: #fff;
+}
+
+.issue-button-submit {
+    border-radius: 3px;
+    background-color: #f88601;
+    color: #fff;
+    padding: 3px 7px;
+    margin: 0 0 0 10px;
+}
+
+.issue-button-cancel {
+    background-color: #fff;
+    color: #000;
+    border-radius: 3px;
+    padding: 3px 7px;
+    border: 1px solid #999;
+}
+
+.flex-end {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.border-emm {
+    border-radius: 50%;
+    border: 1px solid #f88601;
+    width: 10px;
+    height: 10px;
+    position: relative;
+}
+
+.emm {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    width: 3px;
+    height: 3px;
+    border-right: 1px solid #f88601;
+    border-top: 1px solid #f88601;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.issue-ticket-detail {
+    height: 83vh;
+    width: 85%;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 15px
+}
+
+.round-border {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    top: -10px;
+}
+
+.issue-border {
+    border-bottom: 1px dotted #999;
+    position: relative;
+}

@@ -1,0 +1,303 @@
+.secondsell__wrapper {
+    background: linear-gradient(to right, #490492, #6711b7, #490492);
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.secondsell__wrapper>div {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+}
+
+.secondsell__wrapper>div:first-child {
+    margin-top: 0;
+}
+
+.secondsell__banner {
+    height: 200px;
+    background: url(../img/banner.png);
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.resetBanner {
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.secondsell__banner>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 200;
+}
+
+.secondsell__title {
+    text-align: center;
+    margin: 10px 0 15px 0;
+}
+
+.secondsell__title>span {
+    display: inline-block;
+    width: 40%;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin: 0 10px;
+    padding: 3px 0;
+}
+
+.secondsell__title>div {
+    display: inline-block;
+    width: 40%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 5px;
+    margin: 0 10px;
+    padding: 3px 0;
+}
+
+.secondsell__title::before {
+    content: '';
+    display: inline-block;
+    background: url(../img/left.png) no-repeat;
+    background-size: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+}
+
+.secondsell__title::after {
+    content: '';
+    display: inline-block;
+    background: url(../img/right.png) no-repeat;
+    background-size: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+}
+
+.secondsell__context {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.secondsell--flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.secondsell--item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
+    position: relative;
+}
+
+.del {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    margin-top: -0.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    width: 100%;
+    height: 2rem;
+}
+
+.secondsell--input {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    appearance: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.textarea-style {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+}
+
+.secondsell--button {
+    width: 100%;
+    background: linear-gradient(45deg, #58deaa, #2e97be);
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.point-none {
+    border: 1px solid #fff;
+}
+
+.point-full {
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+.secondsell--textarea {
+    width: 100%;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.select-style {
+    appearance: none;
+    background-color: transparent;
+    text-align: center;
+    color: #fff;
+    border: none;
+}
+
+.select-style::-moz-placeholder {
+    text-align: center;
+}
+
+.select-style::placeholder {
+    text-align: center;
+}
+
+.secondsell__swiper {
+    width: 100%;
+    margin-top: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    background-color: #fff;
+}
+
+.showbutton {
+    text-align: center;
+    line-height: 2rem;
+    height: 2rem;
+    ;
+}
+
+.secondsell__enroll {
+    background-color: #fff;
+    border: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.secondsell__enroll::before {
+    content: "报名者展示";
+    display: inline-block;
+    width: 40%;
+    background: linear-gradient(45deg, #58deaa, #2e97be);
+    border-radius: 30px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: -20px;
+    left: 50%;
+    margin-left: -20%;
+    padding: 10px;
+}
+
+.secondsell__enroll--wrapper {
+    width: 100%;
+    height: 6.5rem;
+    overflow: hidden;
+}
+
+.enrollImg {
+    width: 14.7%;
+    height: 2.8rem;
+    border-radius: 50%;
+    border: 1px solid #999;
+    margin-right: 4%;
+}
+
+.enrollImg:nth-child(5n) {
+    margin-right: 0;
+}
+
+.secondsell--fixed {
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 600;
+    color: #fff;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.weui-uploader__file {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2%;
+}
+
+.weui-uploader__input-box {
+    width: 5rem;
+    height: 5rem;
+}
+
+.userbutton {
+    width: 50%;
+    height: 4rem;
+    margin: 20px auto;
+    display: block;
+    background: url(./../img/button.png)no-repeat;
+    background-size: 100% 100%;
+    animation: scale 0.25s linear infinite;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0.9)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+
+/*以下为Zqw后期所加*/
+
+.selected_school_name {
+    width: 40%;
+    text-align: left;
+    margin-left: 10%
+}
+
+.selected_school_del_icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 10%;
+}

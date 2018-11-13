@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>营销海报</title>
+    <link rel="stylesheet" href="./src/css/link.css">
+    <style>
+        .weui-tabbar__label{
+            font-size: 1rem;
+        }
+        .tab__item{
+            border:1px solid #999;
+            padding:5px 10px;
+            border-radius: 5px;
+            color:#999;
+            margin: 3px 3px;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        
+        .cards{
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .post{
+            width: 48%;
+            height: 190px;
+            margin-top: 20px;
+            box-shadow: 0 0 5px 0 #e6e5e3
+        }
+        .post img{
+            width: 100%;
+            height: 100%;
+        }
+        .weui-tabbar{
+            position: fixed;
+        }
+        .weui-search-bar{
+            position: fixed;
+            width: 100%;
+            z-index: 200;;
+        }
+        #searchList{
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        .tabPage{
+            display:none;
+            overflow:scroll;
+            padding:25px 15px 50px 15px;
+            box-sizing: border-box;
+
+        }
+        </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <!-- 搜索栏 -->
+        <div>
+            <div class="weui-search-bar" id="searchBar">
+                <form class="weui-search-bar__form">
+                    <div class="weui-search-bar__box">
+                        <i class="weui-icon-search"></i>
+                        <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                        <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                    </div>
+                    <label class="weui-search-bar__label" id="searchText">
+                        <i class="weui-icon-search"></i>
+                        <span>搜索</span>
+                    </label>
+                </form>
+                <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+            </div>
+            <div id="searchList" style="display:none">
+                <div class="weui-cells" style="margin-top:2.7rem;">
+                    <div style="margin:10px 0 0 20px ;">
+                        热门搜索
+                    </div>
+                    <div style="margin:5px 20px 10px 20px">
+                        <div class="tab__item">双十一</div>
+                        <div class="tab__item">万圣节</div>
+                        <div class="tab__item">双十二</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 搜索栏 结束 -->
+
+        <!-- 海报主体 -->
+        <div class="tabPage" id="tab1">123123</div>
+        <div class="tabPage" id="tab2" >
+
+            <div class="flex cards">
+                <!-- <div class="post">
+            <div class="weui-uploader__input-box">
+                <input id="uploaderInput" class="weui-uploader__input" type="file">
+            </div>
+        </div> -->
+                <div class="post bv_location" data-id="196" data-bgid="192">
+                    <img src="https://www.cnghjy.com/Public/Home/marketingTools/poster/templeteImg/face2.png" class="lazy_load"
+                        alt="">
+                </div>
+                <div class="post bv_location" data-id="194" data-bgid="191">
+                    <img src="https://www.cnghjy.com/Public/Home/marketingTools/poster/templeteImg/face1.png" class="lazy_load"
+                        alt="">
+                </div>
+                <div class="post bv_location" data-id="569" data-bgid="567">
+                    <img src="http://one.cnghjy.com/Act_2018-10-25_5bd176f86ec45.png" class="lazy_load" alt="">
+                </div>
+                <div class="post bv_location" data-id="717" data-bgid="715">
+                    <img src="http://one.cnghjy.com/Act_2018-10-26_5bd2cc2e2553d.png" class="lazy_load" alt="">
+                </div>
+
+                <div class="post bv_location" data-id="717" data-bgid="715">
+                    <img src="http://one.cnghjy.com/Act_2018-10-26_5bd2cc2e2553d.png" class="lazy_load" alt="">
+                </div>
+                <div class="post bv_location" data-id="717" data-bgid="715">
+                    <img src="http://one.cnghjy.com/Act_2018-10-26_5bd2cc2e2553d.png" class="lazy_load" alt="">
+                </div>
+                <div class="post bv_location" data-id="717" data-bgid="715">
+                    <img src="http://one.cnghjy.com/Act_2018-10-26_5bd2cc2e2553d.png" class="lazy_load" alt="">
+                </div>
+                <div class="post bv_location" data-id="717" data-bgid="715">
+                    <img src="http://one.cnghjy.com/Act_2018-10-26_5bd2cc2e2553d.png" class="lazy_load" alt="">
+                </div>
+
+            </div>
+
+        </div>
+        <div class="tabPage" id="tab3" style="display:none">asdfsasdf</div>
+        <div class="tabPage" id="tab4" style="display:none">asdfsasdf</div>
+
+    </div>
+
+    <!-- 海报主体 结束 -->
+
+    <!-- 底部栏 -->
+    <div class="weui-tabbar">
+        <div class="weui-tabbar__item weui-bar__item--on" onclick="$('.tabPage').hide();$('#tab1').show()">
+            <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
+            <p class="weui-tabbar__label">热点</p>
+        </div>
+        <div class="weui-tabbar__item" onclick="$('.tabPage').hide();$('#tab2').show()">
+            <p class="weui-tabbar__label">节日</p>
+        </div>
+        <div class="weui-tabbar__item" onclick="$('.tabPage').hide();$('#tab3').show()">
+            <p class="weui-tabbar__label">营销</p>
+        </div>
+        <div class="weui-tabbar__item" onclick="$('.tabPage').hide();$('#tab4').show()">
+            <p class="weui-tabbar__label">其他</p>
+        </div>
+    </div>
+    </div>
+    <!-- 底部栏 结束 -->
+    <div>
+
+    </div>
+
+    <script src="./src/js/jquery-2.1.4.js"></script>
+    <script src="./src/js/jquery-weui.min.js"></script>
+    <script>
+        $(".weui-search-bar__box").click(function () {
+            $("#searchList").slideDown();
+        })
+        $("#searchCancel").click(function () {
+            $("#searchList").slideUp()
+        })
+        $('.weui-tabbar__item').click(function(){
+            $('.weui-tabbar__item').removeClass("weui-bar__item--on");
+            $(this).addClass('weui-bar__item--on');
+        })
+    </script>
+</body>
+
+</html>

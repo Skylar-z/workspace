@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>编辑商品</title>
+    <link rel="stylesheet" href="./css/link.css">
+    <style>
+        .weui-cell__hd{
+        min-width:5rem
+    }
+    .weui-uploader__input-box{
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+    .weui-uploader__input-box:before{
+        width: 2px ;
+        height: 1.5rem;
+    }
+    .weui-uploader__input-box:after{
+        width: 1.5rem;
+        height: 2px;
+    }
+    .weui-uploader__input{
+        width: 2rem;
+        height: 2rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="weui-cells mt0">
+            <div class="weui-cell weui-cell_access" onclick="$('#addImg').css('display','block')">
+                <div class="weui-cell__hd">
+                    添加商品图片
+                </div>
+                <div class="weui-cell__bd"></div>
+                <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    商品名称：
+                </div>
+                <div class="weui-cell__bd">
+                    <input type="text" class="weui-input">
+                </div>
+            </div>         
+
+            <div id="createNewCollage" class="weui-cell" style="background-color:#fff;">
+                <div class="weui-cell__bd" style="color: #f88601;text-align: center;">
+                    <div>+ 添加商品规格</div>
+                </div>
+            </div>
+
+            <div class="weui-cell weui-cell_access" onclick="$('#goodsDetail').css('display','block')">
+                <div class="weui-cell__hd">
+                    商品详情
+                </div>
+                <div class="weui-cell__bd">
+
+                </div>
+                <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+            </div>
+
+            <div class="weui-cell weui-cell_access" onclick="$('#orgDetail').css('display','block')">
+                <div class="weui-cell__hd">
+                    机构详情
+                </div>
+                <div class="weui-cell__bd"></div>
+                <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+            </div>
+
+            <div class="weui-cell weui-cell_access" onclick="newenroll()">
+                <a href="javascript:;" class="open-popup flexbetween" data-target="#enroll" style="width:100% ">
+                    <span>报名设置</span>
+                    <div class="weui-cell__ft weui-cell__ft_in-access">
+                        姓名，手机号
+                    </div>
+                </a>
+            </div>
+
+
+
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div id="addImg" class="fullpage" style="display: none">
+        <div class="page__hd">
+            <div class="page__desc">最多添加3张图片，建议尺寸为750*400，展示效果最好 </div>
+        </div>
+        <div>
+            <div class="relative">
+                <img class="img" src="./img/1.jpg" />
+                <img src="./img/delete.png" class="absolute" style="top:5px;right:5px;width: 2rem;height: 2rem;" />
+            </div>
+
+            <div class="relative">
+                <img class="img" src="./img/1.jpg" />
+                <img src="./img/delete.png" class="absolute" style="top:5px;right:5px;width: 2rem;height: 2rem;" />
+            </div>
+        </div>
+        <a class="submit-button-full2 mt10 upload-relative">
+            <input id="addImgFile" class="upload-style" type="file" multiple />添加图片
+        </a>
+        <a class="submit-button-full2 mt10" onclick="$('#addImg').hide();$('#baseTab').show()">确定</a>
+    </div>
+    <!-- 轮播图结束 -->
+
+
+
+    <!-- 报名弹层 -->
+    <div id="enroll" class='weui-popup__container popup-bottom'>
+        <div class="weui-popup__overlay"></div>
+        <div class="weui-popup__modal">
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a href="javascript:;" class="picker-button close-popup">保存</a>
+                    <h1 class="title">报名表单设置</h1>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="weui-cells mt0">
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd">姓名</div>
+                        <input name="msg_info[]" type="hidden" value="姓名">
+                        <div class="weui-cell__bd"></div>
+                        <div class="weui-cell__ft">必填</div>
+                        <input name="required_flag[]" type="hidden" value="1" />
+                    </div>
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd">手机</div>
+                        <input name="msg_info[]" type="hidden" value="手机">
+                        <div class="weui-cell__bd"></div>
+                        <div class="weui-cell__ft">必填</div>
+                        <input name="required_flag[]" type="hidden" value="1" />
+                    </div>
+                    <div class="weui-cell flexbetween">
+                        <div class="weui-cell__hd">
+                            <img style="width:20px;height:20px" src="./img/remove.png" alt="">
+                        </div>
+                        <div class="weui-cell__bd">
+                            <input name="msg_info[]" class="weui-input" value="{$v['msg_info']}" placeholder="报名填写项">
+                        </div>
+                        <div class="weui-cell__ft flexrow" onclick="selectThis(this)">
+                            <div class="<?= $v['required_flag']=='1'?'point-full':'point-none' ?>"></div>
+                            <input name="required_flag[]" type="hidden" value="{$v['required_flag']}" />
+                            <span>必填</span>
+                        </div>
+                    </div>
+                    <div class="weui-cell" onclick="$('.BG').show()">
+                        <div class="weui-cell__bd" style="text-align:center;color:#f88601" onclick="newenroll()">
+                            +新增报名项
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 报名弹层 结束 -->
+
+
+    <!-- 商品规格 -->
+    <div class="BG">
+        <div class="page">
+            <div class="weui-cells__title">
+                添加商品规格，如颜色，尺寸等,规格一支持上传该规格图片信息。
+            </div>
+            <div class="weui-cells mt0">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        规格1：
+                    </div>
+                    <div class="weui-cell__bd">
+                        <input type="text" class="weui-input" placeholder="至少设置一种规格">
+                    </div>
+                    <div class="weui-cell__ft">
+                        <span class="buttom2" onclick="$('#format__value').show()">规格设置</span>
+                    </div>
+                </div>
+
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        规格2：
+                    </div>
+                    <div class="weui-cell__bd">
+                        <input type="text" class="weui-input" placeholder="如无需设置请放空">
+                    </div>
+                    <div class="weui-cell__ft">
+                        <span class="buttom2" onclick="$('#format__value').show()">规格设置</span>
+                    </div>
+                </div>
+
+
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        规格3：
+                    </div>
+                    <div class="weui-cell__bd">
+                        <input type="text" class="weui-input" placeholder="如无需设置请放空">
+                    </div>
+                    <div class="weui-cell__ft">
+                        <span class="buttom2" onclick="$('#format__value').show()">规格设置</span>
+                    </div>
+                </div>
+
+                <div class="flexrow" style="width: 100%">
+                    <div class="submit-button-full">
+                        上一步
+                    </div>
+                    <div class="submit-button-full" onclick="$('#format__desc').show()">
+                        下一步
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 规格值 -->
+        <div id="format__value" class="format__desc">
+            <div class="weui-cells__title">
+                请填写以下规格值：如：红色、绿色、蓝色
+            </div>
+            <div class="weui-cells mt0">
+
+
+                <div class="flexrow">
+                    <div class="weui-cells mt0">
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">
+                                <span>规格值</span>
+                            </div>
+                            <div class="weui-cell__bd flexrow relative" style="left:-10px;">
+                                <input type="text" class="weui-input">
+                            </div>
+                            <div class="weui-cell__ft">
+                                <div class="weui-uploader__input-box">
+                                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*"
+                                        multiple="">
+                                </div>
+                            </div>
+                            <div class="weui-cell__ft">
+                                <i style="font-size:1.5rem" class="iconfont icon-lajitong" onclick="del()"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="weui-cell" id="addFormat__value">
+                    <div class="weui-cell__bd addButtom" onclick="addFormat__value()">
+                        +添加规格值
+                    </div>
+                </div>
+
+                <div class="submit-button-full2" onclick="$('.format__desc').hide()">确定</div>
+
+            </div>
+
+        </div>
+        <!-- 规格值 结束 -->
+
+
+
+        <!-- 具体规格数据 -->
+        <div id="format__desc" class="format__desc">
+            <div class="weui-cells__title">
+                请填写每一项商品的详情
+            </div>
+            <div class="flexrow">
+                <div class="weui-cells mt0" style="width:90%">
+                    <div class="weui-cell format__select flexrow">
+                        <div class="weui-cell__hd ">
+                            <select name="" id="">
+                                <option value="">--请选择--</option>
+                                <option value="">红色的</option>
+                                <option value="">红色的</option>
+                                <option value="">红色的</option>
+                            </select>
+
+                        </div>
+
+                        <div class="weui-cell__bd">
+                            <select name="" id="">
+                                <option value="">--请选择--</option>
+                                <option value="">僵尸王江城</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                            </select>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <select name="" id="">
+                                <option value="">--请选择--</option>
+                                <option value="">红牛</option>
+                                <option value="">雪碧</option>
+                                <option value="">王老吉</option>
+                                <option value="">肥宅雪</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd">
+                            原价：
+                            <input type="number" style="width:20%" class="weui-input">
+                        </div>
+                        <div class="weui-cell__hd">
+                            现价：
+                            <input type="number" style="width:20%" class="weui-input">
+                        </div>
+                        <div class="weui-cell__hd">
+                            数量：
+                            <input type="number" style="width:20%" class="weui-input">
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-left: 5px">
+                    <i style="font-size:1.5rem" class="iconfont icon-lajitong"></i>
+                </div>
+            </div>
+
+            <div class="flexrow">
+                <div class="weui-cells mt0" style="width:90%">
+                    <div class="weui-cell format__select flexrow">
+                        <div class="weui-cell__hd ">
+                            <select name="" id="">
+                                <option value="">--请选择--</option>
+                                <option value="">红色的</option>
+                                <option value="">红色的</option>
+                                <option value="">红色的</option>
+                            </select>
+
+                    
+                        </div>
+
+                        <div class="weui-cell__bd">
+                            <select name="" id="">
+                                <option value="">--请选择--</option>
+                                <option value="">僵尸王江城</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                            </select>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <select name="" id="">
+                                <option value="">--请选择--</option>
+                                <option value="">红牛</option>
+                                <option value="">雪碧</option>
+                                <option value="">王老吉</option>
+                                <option value="">肥宅雪</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd">
+                            原价：
+                            <input type="number" style="width:20%" class="weui-input">
+                        </div>
+                        <div class="weui-cell__hd">
+                            现价：
+                            <input type="number" style="width:20%" class="weui-input">
+                        </div>
+                        <div class="weui-cell__hd">
+                            数量：
+                            <input type="number" style="width:20%" class="weui-input">
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-left: 5px">
+                    <i style="font-size:1.5rem" class="iconfont icon-lajitong"></i>
+                </div>
+            </div>
+
+
+            <div class="weui-cell" id="addFormat__desc">
+                <div class="weui-cell__bd addButtom">
+                    +添加
+                </div>
+            </div>
+
+            <div class="submit-button-full">确定</div>
+
+
+        </div>
+    </div>
+
+    <!-- 具体规格数据 结束-->
+
+
+    <div class="submit-button-full2">
+        确定
+    </div>
+    </div>
+    <!-- 商品规格 结束 -->
+
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+    <script>
+        //添加报名收集信息
+        function newenroll() {
+            //先判断之前是否有空选项
+            /*  if($('#newEnroll').prev().find("input[type='text']").val() == ''){
+                 $.toast("请先填写空选项","text");return;
+             } */
+            $('#newEnroll').before(
+                `
+        <div class="weui-cell flexbetween">
+            <div class="weui-cell__hd" onclick="delThis(this)">
+                <img style="width:20px;height:20px" src="__PUBLIC__/Home/marketingTools/img/remove.png" alt="">
+            </div>
+            <div class="weui-cell__bd">
+                <input type="text" name="msg_info[]" class="weui-input" placeholder="报名填写项">
+            </div>
+            <div class="weui-cell__ft flexrow" onclick="selectThis(this)">
+                <div class="point-none"></div>
+                <input name="required_flag[]" type="hidden" value="0"/>
+                <span>必填</span>
+            </div>
+        </div>
+        `
+            )
+        }
+
+
+        function addFormat__value() {
+            $('#addFormat__value').before(
+                `
+           <div class="weui-cells mt0">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        规格值：
+                    </div>
+                    <div class="weui-cell__bd">
+                        <input type="text" class="weui-input">
+                    </div>
+                    <div class="weui-cell__ft">
+                        <span onclick="$(this).parent().parent().remove()" class="buttom2">删除</span>
+                    </div>
+                </div>
+           </div>
+            `
+            )
+        }
+
+
+        function del(e){
+
+        }
+    </script>
+</body>
+
+</html>

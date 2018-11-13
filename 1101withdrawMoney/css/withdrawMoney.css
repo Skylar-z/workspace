@@ -1,0 +1,13 @@
+.achieveBG{
+    background:url(./../img/doudouBG.png);
+    background-size: 100% 100%;
+    width: 100%;
+    padding: 20px 0;
+    color: #fff;
+
+}
+
+.achieveBG>.flexrow>.flexcolmn{
+    width: 40%;
+    padding: 10px 0;
+}

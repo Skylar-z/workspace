@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>投诉</title>
+    <link rel="stylesheet" href="./../src/css/weui.min.css">
+    <link rel="stylesheet" href="./../src/css/jquery-weui.min.css">
+    <style>
+        .page {
+            min-height: 100vh;
+            box-sizing: border-box;
+            background-color: #f1f0f5;
+            font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div id="base">
+            <div class="weui-cells__title">
+                请选择投诉原因
+            </div>
+            <div class="weui-cells">
+                <div class="weui-cell weui-cell_access" onclick="$('#base').hide();$('#youdao').show()">
+                    <div class="weui-cell__hd">
+                        诱导
+                    </div>
+                    <div class="weui-cell__bd"></div>
+                    <div class="weui-cell__ft weui-cell__ft_in--access"></div>
+                </div>
+
+                <div class="weui-cell" onclick="location.href='complaintsDesc.html'">
+                    <div class="weui-cell__hd">
+                        骚扰
+                    </div>
+                </div>
+
+                <div class="weui-cell weui-cell_access" onclick="$('#base').hide();$('#cheat').show()">
+                    <div class="weui-cell__hd">
+                        欺诈
+                    </div>
+                    <div class="weui-cell__bd"></div>
+                    <div class="weui-cell__ft weui-cell__ft_in--access"></div>
+                </div>
+
+                <div class="weui-cell" onclick="location.href='complaintsDesc.html'">
+                    <div class="weui-cell__hd">恶意营销</div>
+                    <div class="weui-cell__bd"></div>
+                </div>
+
+                <div class="weui-cell" onclick="location.href='complaintsDesc.html'">
+                    <div class="weui-cell__hd">
+                        其他
+                    </div>
+                    <div class="weui-cell__bd"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 诱导 -->
+        <div id="youdao" style="display:none">
+            <div class="weui-cells__title">
+                请选择投诉原因
+            </div>
+            <div class="weui-cells">
+                <div class="weui-cell" onclick="location.href='complaintsDesc.html'">
+                    <div class="weui-cell__hd">
+                        诱导分享
+                    </div>
+                    <div class="weui-cell__bd"></div>
+                </div>
+
+
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        诱导关注
+                    </div>
+                    <div class="weui-cell__bd"></div>
+                </div>
+
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        诱导下载
+                    </div>
+                    <div class="weui-cell__bd"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 诱导 结束 -->
+
+
+        <!-- 欺诈 -->
+        <div id="cheat" class="weui-cells" onclick="location.href='complaintsDesc.html?cheat'" style="display:none">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    多级分销
+                </div>
+
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    网络借贷
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    兼职赚钱
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    高额返利
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    相亲交友
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    虚假活动
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    高收益理财
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    微盘微交易
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    不在以上类型中
+                </div>
+            </div>
+        </div>
+        <!-- 欺诈 结束 -->
+    </div>
+
+    <script src="./../src/js/jquery-2.1.4.js"></script>
+</body>
+
+</html>
