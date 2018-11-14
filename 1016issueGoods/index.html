@@ -10,10 +10,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>商品列表</title>
     <link rel="stylesheet" href="./css/link.css">
-       <style>
-        .iconfont{
-        font-size: 1rem;
-    }
+    <style>
+        .iconfont {
+            font-size: 1rem;
+        }
+        
+        .weui-switch,
+        .weui-switch-cp__box {
+            width: 2rem;
+            height: 1rem;
+            right: -1rem;
+        }
+        
+        .weui-switch-cp__box:after,
+        .weui-switch:after {
+            width: 1rem;
+            height: 1rem;
+        }
+        
+        .weui-switch-cp__box:after,
+        .weui-switch:after {
+            top: -1px;
+            left: -5px;
+        }
+        
+        tr {
+            text-align: center;
+            height: 3rem;
+        }
+        
+        .weui-switch-cp__box:before,
+        .weui-switch:before {
+            width: 0;
+        }
     </style>
 </head>
 
@@ -38,6 +67,74 @@
 
         <!-- 商品列表 -->
         <div class="weui-cells mt0">
+            <table style="width:100%">
+                <tr>
+                    <th>商品名称</th>
+                    <th>编辑</th>
+                    <th>删除</th>
+                    <th>推荐</th>
+                </tr>
+                <tr style="text-align:center">
+                    <td>红烧猪肘子</td>
+                    <td>
+                        <i class="iconfont icon-bianji" onclick="window.location.href='editGoods.html'"></i>
+                    </td>
+                    <td>
+                        <i class="iconfont icon-shanchu"></i>
+                    </td>
+                    <td>
+                        <label for="switchCP" class="weui-switch-cp">
+                        <input id="switchCP" class="weui-switch-cp__input" type="checkbox" checked="checked">
+                        <div class="weui-switch-cp__box"></div>
+                      </label>
+                    </td>
+                </tr>
+                <tr style="text-align:center">
+                    <td>红烧猪肘子</td>
+                    <td>
+                        <i class="iconfont icon-bianji" onclick="window.location.href='editGoods.html'"></i>
+                    </td>
+                    <td>
+                        <i class="iconfont icon-shanchu"></i>
+                    </td>
+                    <td>
+                        <label for="switchCP1" class="weui-switch-cp">
+                        <input id="switchCP1" class="weui-switch-cp__input" type="checkbox" checked="checked">
+                        <div class="weui-switch-cp__box"></div>
+                      </label>
+                    </td>
+                </tr>
+                <tr style="text-align:center">
+                    <td>红烧猪肘子</td>
+                    <td>
+                        <i class="iconfont icon-bianji" onclick="window.location.href='editGoods.html'"></i>
+                    </td>
+                    <td>
+                        <i class="iconfont icon-shanchu"></i>
+                    </td>
+                    <td>
+                        <label for="switchCP2" class="weui-switch-cp">
+                        <input id="switchCP2" class="weui-switch-cp__input" type="checkbox">
+                        <div class="weui-switch-cp__box"></div>
+                      </label>
+                    </td>
+                </tr>
+                <tr style="text-align:center">
+                    <td style="max-width:5rem;">控制一下字数显示7个字，超过...</td>
+                    <td>
+                        <i class="iconfont icon-bianji" onclick="window.location.href='editGoods.html'"></i>
+                    </td>
+                    <td>
+                        <i class="iconfont icon-shanchu"></i>
+                    </td>
+                    <td>
+                        <label for="switchCP3" class="weui-switch-cp">
+                        <input id="switchCP3" class="weui-switch-cp__input" type="checkbox" checked="checked">
+                        <div class="weui-switch-cp__box"></div>
+                      </label>
+                    </td>
+                </tr>
+            </table>
 
 
             <div class="weui-cell">
@@ -45,8 +142,6 @@
                     <p>红烧猪肘子</p>
                 </div>
                 <div class="weui-cell__ft">
-                    <i class="iconfont icon-bianji" style="color:green;" onclick="window.location.href='editGoods.html'"></i>
-                    <i class="iconfont icon-shanchu" style="margin-left:10px;color:red"></i>
                 </div>
             </div>
 
@@ -101,13 +196,13 @@
                 </div>
             </div>
             <div class="bottombar__item">
-                    <div class="bottombar__icon">
-                        <i class="iconfont icon-dingdanguanli"></i>
-                    </div>
-                    <div class="bottombar__text">
-                        <span>订单管理</span>
-                    </div>
+                <div class="bottombar__icon">
+                    <i class="iconfont icon-dingdanguanli"></i>
                 </div>
+                <div class="bottombar__text">
+                    <span>订单管理</span>
+                </div>
+            </div>
         </div>
         <!-- 底部栏 结束-->
 
@@ -117,69 +212,6 @@
     <script src="./js/jquery-weui.min.js"></script>
     <script src="./js/swiper.min.js"></script>
     <script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 </body>
 

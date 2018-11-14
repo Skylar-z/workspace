@@ -14,6 +14,22 @@
 
 <body>
     <div class="page">
+        <!-- 商品轮播图 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
         <!-- 商品列表 -->
         <div class="goodslist">
             <div class="good" onclick="window.location.href='goodsDesc.html'">
@@ -67,5 +83,16 @@
         <!-- 商品列表 结束 -->
     </div>
 </body>
+
+<script src="./../src/js/jquery-2.1.4.js"></script>
+<script src="./../src/js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    })
+</script>
 
 </html>
