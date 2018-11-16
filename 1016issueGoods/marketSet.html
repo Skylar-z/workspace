@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商城设置</title>
+    <link rel="stylesheet" href="./css/link.css">
+    <style>
+        .weui-cell__hd {
+            min-width: 5rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div style="display:flex;align-items:center;justify-content:flex-end">
+            <div class="tab__item--on" style="display:inline-block;text-align:right;margin:5px;">保存设置</div>
+        </div>
+        <div class="weui-cells mt0">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    商城名称
+                </div>
+                <div class="weui-cell__bd">
+                    <input type="text" maxlength="10" class="weui-input">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    公告
+                </div>
+                <div class="weui-cell__bd">
+                    <input type="text" class="weui-input">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="weui-cells__title" style="text-align:right">删除</div>
+        <div class="weui-cells">
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__hd">
+                    选择商品
+                </div>
+                <div class="weui-cell__bd">
+                    <select name="" id="" class="select-style">
+                       <option value="">红烧猪肘子</option>
+                       <option value="">清蒸黄花鱼</option>
+                       <option value="">波士顿龙虾</option>
+
+                   </select>
+                </div>
+                <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    推广图片
+                </div>
+                <div class="weui-cell__bd"></div>
+                <div class="weui-cell__ft flexcolmn" style="align-items: center;justify-content: center">
+                    <div class="weui-uploader__input-box">
+                        <img src="./../src/img/2.png" style="width:100%;height:100%" alt="">
+                        <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
+                    <span style="font-size:0.8rem;color:#999">不上传则默认商品第一张图</span>
+                </div>
+            </div>
+        </div>
+        <div class="submit-button-full" style="background:linear-gradient(to right,#ffd073,#ffaa00)" onclick="addSwiper()">添加首页轮播商品</div>
+    </div>
+
+
+
+    <script src="js/jquery-2.1.4.js"></script>
+    <script>
+        function addSwiper() {
+            console.log("aaa");
+            $('.submit-button-full').before(`
+        <div class="weui-cells__title" style="text-align:right">删除</div>
+            <div class="weui-cells">
+                <div class="weui-cell weui-cell_access">
+                    <div class="weui-cell__hd">
+                        选择商品
+                    </div>
+                    <div class="weui-cell__bd">
+                        <select name="" id="" class="select-style">
+                       <option value="">红烧猪肘子</option>
+                       <option value="">清蒸黄花鱼</option>
+                       <option value="">波士顿龙虾</option>
+
+                   </select>
+                    </div>
+                    <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        推广图片
+                    </div>
+                    <div class="weui-cell__bd"></div>
+                    <div class="weui-cell__ft flexcolmn" style="align-items: center;justify-content: center">
+                        <div class="weui-uploader__input-box">
+                            <img src="./../src/img/2.png" style="width:100%;height:100%" alt="">
+                            <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                        </div>
+                        <span style="font-size:0.8rem;color:#999">不上传则默认商品第一张图</span>
+                    </div>
+                </div>
+            </div>
+        `)
+        }
+    </script>
+</body>
+
+</html>
