@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>请点击您要参加的团</title>
+    <link rel="stylesheet" href="mtcss/link.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+
+    <style>
+        .weui-form-preview__item {
+            line-height: 3rem;
+        }
+        
+        .gatherCollect {
+            border-bottom: 1px solid #e5e5e5;
+            padding: 5px;
+        }
+        
+        .gatherCollect:last-of-type {
+            border-bottom: none;
+        }
+        
+        .weui-form-preview__label {
+            min-width: 30%;
+        }
+        
+        .BG {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%
+        }
+        
+        .user-avatar-wraper {
+            width: 2.5rem;
+            padding: 0;
+        }
+        
+        .user-avatar-wraper {
+            width: 2.5rem;
+            padding: 0;
+        }
+        
+        .user-avatar-wraper:first-child {
+            margin-left: 0
+        }
+        
+        .user-avatar-wraper:last-child {
+            margin-right: 0
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--隐藏域开始-->
+    <input type="hidden" id="act_id" value="{$_GET['act_id']}">
+    <input type="hidden" id="team_id" value="{$_GET['team_id']}">
+    <input type="hidden" id="collage_id" value="">
+    <input type="hidden" id="join_id" value="{$_GET['join_id']}">
+    <!--隐藏域结束-->
+    <div class="page">
+        <div class="weui-cells__title mt0" style="text-align: center;font-weight: bold">当前分享的团:</div>
+        <div class="weui-cells ">
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd">
+                    <div style="font-size: 13px;font-weight: bold">3人团</div>
+                    <div style="font-size: 12px;">
+                        定金:<span class="themecolor">0.01</span>元
+                    </div>
+                    <div style="font-size: 12px;">
+                        团员价:<span class="themecolor">1</span>元
+                    </div>
+                    <div style="font-size: 12px;">
+                        团长价:<span class="themecolor">1</span>元
+                    </div>
+                    <div style="font-size: 12px;">已有10人参加</div>
+                </div>
+                <div style="width: 14rem;height:60px;overflow-x: scroll">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!--这里是取前三个的人   开始-->
+                            <div class="swiper-slide">
+                                <img class="absolute" src="https://lg-qbebxteq-1254009145.cos.ap-shanghai.myqcloud.com/hg.png" style="width: 20px;height:20px;top: 0px;left: 0px;z-index:2;" alt="">
+                                <img style="border: 1px solid #f88601;width: 50px;height: 50px;" src="./src/img/1.jpg" class="user-avatar" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="border: 1px solid #f88601;width: 50px;height: 50px;" src="./src/img/2.png" class="user-avatar" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="border: 1px solid #f88601;width: 50px;height: 50px;" src="./src/img/del.png" class="user-avatar" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="border: 1px solid #f88601;width: 50px;height: 50px;" src="./src/img/erweima.png" class="user-avatar" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="border: 1px solid #f88601;width: 50px;height: 50px;" src="./src/img/free.png" class="user-avatar" />
+                            </div>
+                            <!--这里是取后三个的人   结束-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="weui-cells__title mt0" style="text-align: center;font-weight: bold">附近其他的团:</div>
+        <div class="weui-cells ">
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd">
+                    <div style="font-size: 13px;font-weight: bold">2人团</div>
+                    <div style="font-size: 12px;">
+                        定金:<span class="themecolor">1</span>元
+                    </div>
+                    <div style="font-size: 12px;">
+                        团员价:<span class="themecolor">1</span>元
+                    </div>
+                    <div style="font-size: 12px;">
+                        团长价:<span class="themecolor">1</span>元
+                    </div>
+                    <div style="font-size: 12px;">已有2人参加</div>
+                </div>
+                <div style="width: 14rem;height:60px;overflow-x: scroll">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!--这里是取前三个的人   开始-->
+                            <div class="user-avatar-wraper relative">
+
+                                <img style="border: 1px solid #f88601;width: 50px;height: 50px;" src="./src/img/2.png" class="user-avatar" />
+                            </div>
+                            <!--这里是取前三个的人   结束-->
+                            <!--这里是取后三个的人   开始-->
+                            <div class="user-avatar-wraper relative">
+                                <img class="absolute" src="https://lg-qbebxteq-1254009145.cos.ap-shanghai.myqcloud.com/hg.png" style="width: 20px;height:20px;top: 0px;left: 0px;z-index:2;" alt="">
+                                <img style="border: 1px solid #f88601;width: 50px;height: 50px;" src="./src/img/2.png" class="user-avatar" />
+                            </div>
+                            <!--这里是取后三个的人   结束-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cell__ft weui-cell__ft_in-access"></div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+    <!--我要参团隐藏框-->
+    <div id="join_collage" class="preview">
+        <div class="weui-form-preview-BG">
+            <div class="weui-form-preview ">
+                <div class="weui-form-preview__hd relative">
+                    <div class="weui-form-preview__item">
+                        <div class="weui-form-preview__value_in-hd">请填写信息</div>
+                    </div>
+                    <!--<div class="absolute" style="top: -6px;right: 5px;padding: 5px;" onclick="cancle()">X</div>-->
+                </div>
+
+                <form id="attend_form">
+                    <div class="weui-form-preview__bd">
+
+                        <div class="weui-form-preview__item flexrow gatherCollect">
+
+                            <span style="color: red">*</span>
+
+                            <label for="attend_{$k}" class="weui-form-preview__label">{$v['msg_info']}</label>
+                            <input id="attend_{$k}" class="weui-input flag_{$v['required_flag']}" type="{$v['msg_info']=='手机'? 'number':'text'}" name="msgInfo[]">
+                            <input type="hidden" name="msgField[]" value="{$v['msg_info']}">
+                        </div>
+
+                        <div class="weui-form-preview__item flexrow gatherCollect">
+                            <span style="color: red">*</span>
+                            <label for="buy_num" class="weui-form-preview__label">购买数量</label>
+
+                            <div class="weui-count flexrow">
+                                <a onclick="change_buy_num('-')" class="weui-count__btn weui-count__decrease"></a>
+                                <input class="weui-input" id="buy_num" type="number" name="bug_num" value="1" style="width:20%;text-align:center">
+                                <a onclick="change_buy_num('+')" class="weui-count__btn weui-count__increase"></a>
+                            </div>
+
+
+                        </div>
+                        <div class="weui-form-preview__item flexrow gatherCollect">
+                            <span style="color: red">*</span>
+                            <label for="join_school" class="weui-form-preview__label" style="font-size:0.9rem">机构</label>
+                            <select id="join_school" style="color:#999;width:90%" class="select-style">
+                               
+                                <option value="{$v['id']}">{$v['school_name']}</option>
+                              
+                            </select>
+                            <div class="weui-cell__ft weui-cell__ft_in-access" style="margin-top: 18px;"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="weui-form-preview__ft">
+                    <div class="weui-form-preview__btn " hover-class="weui-form-preview__btn_active" style="color:#999" onclick="cancle()">
+                        取消
+                    </div>
+                    <div id="join_collage_commit" class="weui-form-preview__btn" hover-class="weui-form-preview__btn_active" onclick="checkEnableFlag()">确定
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="choosed_team_id">
+    <!--我要参团隐藏框-->
+
+    <!--============支付定金隐藏域开始==============-->
+    <form action="https://www.cnghjy.com/index.php/Home/MiniProPay/payWeb" style="display: none" method="post">
+        <input type="hidden" id="deposit" name="goods_price" value="" />
+        <input type="hidden" name="goods_desc" value="团购支付定金" />
+        <input type="hidden" name="main_school_id" value="{$payToUser['connect_main_school_id']}" />
+        <input type="hidden" name="school_auto" value="{$payToUser['connect_school_auto']}" />
+        <input type="hidden" name="bill_src" value="collage_pay" />
+        <input type="hidden" id="succ2Url" name="successurl" value="" />
+        <input type="hidden" id="failurl" name="failurl" value="https://www.cnghjy.com/index.php/Home/Collage/chooseCollage/act_id/{$joinData['act_id']}" />
+        <input type="hidden" id="succ_func" name="succ_func" value="" />
+        <input type="hidden" id="re_this_id" name="this_id" />
+        <input type="submit" value="提交" id="SMT_Btn" />
+    </form>
+    <!--=============支付定金隐藏域结束============-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                stopOnLastSlide: true,
+                delay: 1000,
+            },
+            slidesPerView: 4,
+            spaceBetween: 0,
+            loop: true,
+            loopFillGroupWithBlank: true,
+        });
+    </script>
+
+
+</body>
+
+</html>

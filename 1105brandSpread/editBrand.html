@@ -70,6 +70,8 @@
         </div>
 
 
+
+
         <div class="weui-cells__title" style="text-align:right">删除</div>
         <div class="weui-cells">
             <div class="table__item">
@@ -98,6 +100,25 @@
                     </div>
                     <div onclick="addList()" style="color:#f88601">+添加一列</div>
                 </div>
+                <div class="weui-cells mt0" style="margin:0 15px">
+                    <div class="linkbutton">
+                        <input type="text" class="weui-input" value="提交">
+                    </div>
+                    <div id="button-setting">
+                        <div class="button-color">
+                            <ul>
+                                <li style="background-color:#303030"></li>
+                                <li style="background-color:#df2822"></li>
+                                <li style="background-color:#085599"></li>
+                                <li style="background-color:#ff4f02"></li>
+                                <li style="background-color:#387742"></li>
+                                <li style="background-color:#876740"></li>
+                                <li style="background-color:#b3b3b3"></li>
+                                <li style="background-color:#ed8c17"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
@@ -111,18 +132,17 @@
             <div class="linkbutton">
                 <input type="text" class="weui-input" placeholder="请输入文字">
             </div>
-            <div class="up" onclick="slideButtonSet()"></div>
-            <div id="button-setting" style="display:none">
+            <div id="button-setting">
                 <div class="button-color">
                     <ul>
-                        <li style="background-color:#99CCFF"></li>
-                        <li style="background-color:#3366CC"></li>
-                        <li style="background-color:#993399"></li>
-                        <li style="background-color:#666666"></li>
-                        <li style="background-color:#FF6666"></li>
-                        <li style="background-color:#99CC66"></li>
-                        <li style="background-color:#FFCC99"></li>
-                        <li style="background-color:#FFFF00"></li>
+                        <li style="background-color:#303030"></li>
+                        <li style="background-color:#da0003"></li>
+                        <li style="background-color:#025fcf"></li>
+                        <li style="background-color:#ff4f02"></li>
+                        <li style="background-color:#38d5b9"></li>
+                        <li style="background-color:#54cf00"></li>
+                        <li style="background-color:#b3b3b3"></li>
+                        <li style="background-color:#ffb902"></li>
                     </ul>
                 </div>
                 <div class="weui-cell">
@@ -134,13 +154,10 @@
             </div>
         </div>
 
-
-
-
         <div id="last"></div>
         <!-- 活动按钮 -->
         <div class="flexrow">
-            <div class="submit-button-full">确认发布</div>
+            <div class="submit-button-full" onclick="location.href='showBrand.html'">确认发布</div>
             <div class="submit-button-full-other">保存活动</div>
         </div>
         <!-- 活动按钮 结束 -->

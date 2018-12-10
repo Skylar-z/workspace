@@ -17,8 +17,7 @@
 }
 
 .enroll-wrapper {
-    width: 80%;
-    margin: 15px auto;
+    margin: 15px;
     position: relative;
 }
 
@@ -27,11 +26,10 @@
 }
 
 .enroll {
-    background-color: #ffc173;
+    background-color: #e4e7ed;
     margin-bottom: 10px;
-    border-radius: 5px;
-    color: #a65c00;
-    padding: 10px 10px;
+    color: #909399;
+    padding: 5px 10px;
 }
 
 .button-wrapper {
@@ -48,8 +46,7 @@
 
 .linkbutton {
     position: relative;
-    background-color: #FF6666;
-    border-radius: 5px;
+    background-color: #da0003;
     margin: 10px 0;
     color: #fff;
     height: 3rem;
@@ -189,7 +186,8 @@
     width: 100%;
     padding: 10px 15px;
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    background-color: #f3f3f3;
 }
 
 .table__item--input>input {
@@ -207,7 +205,6 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: #f3f3f3;
     padding: 15px 15px;
     font-size: 0.8em;
     box-sizing: border-box
